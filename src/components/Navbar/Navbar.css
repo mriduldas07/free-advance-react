@@ -1,0 +1,30 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(198, 218, 236);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-side {
+  margin-left: 15px;
+}
+.right-side a {
+  text-decoration: none;
+  color: black;
+}
+.right-side ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.right-side li {
+  margin-right: 15px;
+  border: 1px solid black;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
