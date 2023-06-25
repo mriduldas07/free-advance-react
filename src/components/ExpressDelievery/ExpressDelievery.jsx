@@ -6,14 +6,14 @@ export default function ExpressDelievery() {
   console.log(expressDelieveryData);
   useEffect(() => {
     fetch(
-      "http://localhost:5000/customers?shipment_status_like=express&&_expand=product"
+      "https://advance-react-server.onrender.com/customers?shipment_status_like=express&&_expand=product"
     )
       .then((res) => res.json())
       .then((data) => setExpressDelieveryData(data))
       .catch((err) => console.log(err));
   }, []);
 
-  const itemsPerPage = 2;
+  const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(expressDelieveryData.length / itemsPerPage);

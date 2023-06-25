@@ -18,7 +18,7 @@ export default function BuyerDetails() {
       productId,
       shipment_status: status,
     };
-    fetch("http://localhost:5000/customers", {
+    fetch("https://advance-react-server.onrender.com/customers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

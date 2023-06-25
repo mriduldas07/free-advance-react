@@ -5,14 +5,14 @@ export default function RegularDelievery() {
   const [regularDelieveryData, setRegularDelieveryData] = useState([]);
   useEffect(() => {
     fetch(
-      "http://localhost:5000/customers?shipment_status_like=regular&&_expand=product"
+      "https://advance-react-server.onrender.com/customers?shipment_status_like=regular&&_expand=product"
     )
       .then((res) => res.json())
       .then((data) => setRegularDelieveryData(data))
       .catch((err) => console.log(err));
   }, []);
 
-  const itemsPerPage = 2;
+  const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(regularDelieveryData.length / itemsPerPage);

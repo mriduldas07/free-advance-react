@@ -6,7 +6,7 @@ export default function Buyer() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://advance-react-server.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));

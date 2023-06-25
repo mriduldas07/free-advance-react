@@ -5,13 +5,13 @@ import "./AllOrders.css";
 export default function AllOrders() {
   const [allOrdersData, setAllOrdersData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/customers?_expand=product")
+    fetch("https://advance-react-server.onrender.com/customers?_expand=product")
       .then((res) => res.json())
       .then((data) => setAllOrdersData(data))
       .catch((err) => console.log(err));
   }, []);
 
-  const itemsPerPage = 2;
+  const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(allOrdersData.length / itemsPerPage);
